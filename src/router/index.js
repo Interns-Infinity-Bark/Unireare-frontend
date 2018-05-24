@@ -5,7 +5,7 @@ import Publish from '@/components/Publish'
 import MyInfo from '@/components/MyInfo'
 import Login from '@/components/Login'
 import Registered from '@/components/Registered'
-
+import NotFound from '@/components/NotFound'
 Vue.use(Router)
 
 export default new Router({
@@ -33,6 +33,10 @@ export default new Router({
     {
       path: '/',
       redirect: '/index'
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })

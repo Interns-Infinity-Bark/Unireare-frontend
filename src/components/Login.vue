@@ -1,5 +1,7 @@
 <template>
-  <div>this is login</div>
+  <div class="container">
+    this is login
+  </div>
 </template>
 
 <script>

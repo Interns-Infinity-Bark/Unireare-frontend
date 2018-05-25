@@ -21,8 +21,4 @@ export default {
 
 <style scoped>
 @import "../../static/bootstrap-3.3.7-dist/css/bootstrap.css"
-.main{
-  height: 1000px;
-  background: #42b983;
-}
 </style>

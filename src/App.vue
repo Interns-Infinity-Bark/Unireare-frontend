@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-inverse navbar-fixed-top container">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
         <div class="row">
           <div class="navbar-brand col-md-2" style="color: white">{{ProjectName}}</div>
@@ -39,6 +39,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 51px;
+  margin-top: 60px;
 }
 </style>

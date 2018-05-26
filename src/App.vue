@@ -14,10 +14,6 @@
     <div class="min-height">
       <router-view></router-view>
     </div>
-    <!--<div class="bottow-height text-center">
-      <div>asdf</div>
-      <div>adsf</div>
-    </div>-->
     <footer class="bottow-height">
       <div class="container">
         <p style="color: white; font-size: 16px; margin-top: 15px" class="text-center">Copyright © 2018 <strong>爱分享</strong>. All Rights Reserved.</p>
@@ -53,7 +49,6 @@ export default {
 }
 .min-height {
   min-height: 600px;
-  background-color: #46b8da;
 }
 .bottow-height{
   height: 82px;

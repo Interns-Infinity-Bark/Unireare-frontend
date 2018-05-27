@@ -9,36 +9,36 @@
             <a class="info" href="#">查看详细信息</a>
           </div>
           <div class="col-md-3 column">
-            <img alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
+            <img class="img-circle" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
           </div>
           <div class="col-md-9 column">
             <h3>笔记标题</h3>
             <h5>
               <span class="label label-default">用户名</span>
-              <img alt="30x30" src="https://s20.postimg.cc/76yix8h6l/30x30.jpg"/>23
-              <img alt="30x30" src="https://s20.postimg.cc/ie7d5pdj1/love_30x30.jpg"/>23
-              <img alt="30x30" src="https://s20.postimg.cc/ug2qzv271/shop_30x30.jpg"/>23
+              <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
+              <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
+              <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
             </h5>
           </div>
         </div>
       </div>
       <div class="col-md-2 column"></div>
-      <div class="col-md-4 column node hovereffect">
-        <div class="row clearfix">
+      <div class="col-md-4 column">
+        <div class="row clearfix node hovereffect">
           <div class="overlay">
             <h4>笔记标题</h4>
             <a class="info" href="#">查看详细信息</a>
           </div>
           <div class="col-md-3 column">
-            <img alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
+            <img class="img-circle" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
           </div>
           <div class="col-md-9 column">
             <h3>笔记标题</h3>
             <h5>
               <span class="label label-default">用户名</span>
-              <img alt="30x30" src="https://s20.postimg.cc/76yix8h6l/30x30.jpg"/>23
-              <img alt="30x30" src="https://s20.postimg.cc/ie7d5pdj1/love_30x30.jpg"/>23
-              <img alt="30x30" src="https://s20.postimg.cc/ug2qzv271/shop_30x30.jpg"/>23
+              <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
+              <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
+              <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
             </h5>
           </div>
         </div>
@@ -57,11 +57,17 @@
 
 <style scoped>
 .node{
-  border: 2px solid rgba(92, 96, 88, 0.66);
+  border: 0.5px solid rgba(92, 96, 88, 0.66);
+  border-radius:25px;
+  -moz-border-radius:25px;
 }
 .hovereffect{
   -webkit-transition:all .3s linear;
   transition:all .3s linear;
+}
+.hovereffect >div{
+  border-radius:25px;
+  -moz-border-radius:25px;
 }
 .hovereffect:hover{
   -ms-transform:scale(1.1);
@@ -124,5 +130,10 @@
 .hovereffect:hover a.info {
   -webkit-transition-delay:.2s;
   transition-delay:.2s;
+}
+span.label{
+  position: relative;
+  right: 5px;
+  bottom: 10px;
 }
 </style>

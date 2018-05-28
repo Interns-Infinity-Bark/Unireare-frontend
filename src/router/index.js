@@ -6,7 +6,10 @@ import MyInfo from '@/components/MyInfo'
 import Login from '@/components/Login'
 import Register from '@/components/Register'
 import NotFound from '@/components/NotFound'
+import PersonalInfo from '@/components/my_info/PersonalInfo'
+import NodeInfo from '@/components/index/NodeInfo'
 Vue.use(Router)
+
 
 export default new Router({
   mode: 'history',
@@ -21,7 +24,20 @@ export default new Router({
     },
     {
       path: '/myInfo',
-      component: MyInfo
+      component: MyInfo,
+      children:[
+        {
+          path:'personal_info',
+          name:'personal_info',
+          component : PersonalInfo
+        },
+        {
+          path:'node_info',
+          name:'node_info',
+          component:NodeInfo
+        },
+      ]
+
     },
     {
       path: '/login',

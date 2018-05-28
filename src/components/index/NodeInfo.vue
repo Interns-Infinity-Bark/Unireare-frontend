@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div>
     <div class="row clearfix">
       <div class="col-md-1 column"></div>
       <div class="col-md-4 column">
@@ -57,7 +57,7 @@
 
 <style scoped>
 .node{
-  border: 0.5px solid rgba(92, 96, 88, 0.66);
+  border: 1px solid rgba(92, 96, 88, 0.66);
   border-radius:25px;
   -moz-border-radius:25px;
 }

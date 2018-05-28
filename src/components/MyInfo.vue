@@ -1,43 +1,51 @@
 <template>
-  <div>
-    <main class="container">
-      <div>
-        <div class="row">
-          <div class="col">
-            <div class="text-center user-center">
-              <div>
-                <img :src="imgSrc">
-              </div>
-              <p>{{userName}}</p>
-              <p>{{email}}</p>
-            </div>
-          </div>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-2 column">
+        <br><br><br>
+        <vertical-title-bar
+        @titleClick = "handleClick"
+        ></vertical-title-bar>
       </div>
-    </main>
-    <div>this is myinfo</div>
+      <div class="col-lg-10 column">
+          <h2>{{title}}</h2>
+          <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import '../../static/bootstrap-3.3.7-dist/js/jquery'
-import '../../static/bootstrap-3.3.7-dist/js/bootstrap'
+import VerticalTitleBar from "./my_info/VerticalTitleBar";
+import PersonalInfo from "./my_info/PersonalInfo";
+import NodeInfo from "./index/NodeInfo";
 export default {
   name: 'MyInfo',
-  data () {
-    return {
-      userName: 'Ninaye',
-      email: '734389987',
-      imgSrc: '../../static/img/logo.png'
+  components: {NodeInfo, PersonalInfo, VerticalTitleBar},
+  data(){
+    return{
+      title:'我发布的笔记'
+    }
+  },
+  created: function(){
+    this.$router.push({name: 'node_info'})
+  },
+  methods:{
+    handleClick(item,index){
+      this.title = item
+      if (index < 3) {
+        this.$router.push({name: 'node_info'})
+      }
+      else if(index == 4){
+        this.$router.push({name:'personal_info'})
+      }
     }
   }
 }
 </script>
 
 <style scoped>
-@import "../../static/bootstrap-3.3.7-dist/css/bootstrap.css"
-.user-center {
-  position: relative;
-  margin-top: 45px;
-}
+/*.box{*/
+  /*border: 1px solid black;*/
+/*}*/
 </style>

@@ -1,20 +1,19 @@
 <template>
   <div>
     <div class="row clearfix">
-      <div class="col-md-1 column"></div>
-      <div class="col-md-4 column">
+      <div class="col-sm-offset-1 col-md-4 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
             <h4>笔记标题</h4>
             <a class="info" href="#">查看详细信息</a>
           </div>
-          <div class="col-md-3 column">
-            <img class="img-circle" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
+          <div class="col-lg-3">
+            <img class="avatar avatar-lg" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
           </div>
-          <div class="col-md-9 column">
+          <div class="col-sm-9">
             <h3>笔记标题</h3>
             <h5>
-              <span class="label label-default">用户名</span>
+              <span class="label label-default label-info">用户名</span>
               <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
               <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
               <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
@@ -22,20 +21,19 @@
           </div>
         </div>
       </div>
-      <div class="col-md-2 column"></div>
-      <div class="col-md-4 column">
+      <div class="col-sm-offset-2 col-md-4 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
             <h4>笔记标题</h4>
             <a class="info" href="#">查看详细信息</a>
           </div>
-          <div class="col-md-3 column">
-            <img class="img-circle" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
+          <div class="col-lg-3 column">
+            <img class="avatar avatar-lg" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
           </div>
-          <div class="col-md-9 column">
+          <div class="col-sm-9 column">
             <h3>笔记标题</h3>
             <h5>
-              <span class="label label-default">用户名</span>
+              <span class="label label-default label-info">用户名</span>
               <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
               <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
               <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
@@ -43,7 +41,6 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1 column"></div>
     </div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
   </div>
@@ -135,5 +132,20 @@ span.label{
   position: relative;
   right: 5px;
   bottom: 10px;
+}
+@media (min-width: 768px){
+  .avatar-lg {
+    width: 70px;
+    height: 70px;
+  }
+}
+.avatar-lg {
+  width: 100px;
+  height: 100px;
+}
+.avatar {
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,.25);
+  box-shadow: 0 0 0.5em rgba(0,0,0,.25);
 }
 </style>

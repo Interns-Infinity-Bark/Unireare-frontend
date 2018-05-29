@@ -7,6 +7,8 @@ import Login from '@/components/Login'
 import Register from '@/components/Register'
 import NotFound from '@/components/NotFound'
 import PersonalInfo from '@/components/my_info/PersonalInfo'
+import UpdatePassword from '@/components/my_info/UpdatePassword'
+import MyNodeInfo from '@/components/my_info/MyNodeInfo'
 import NodeInfo from '@/components/index/NodeInfo'
 Vue.use(Router)
 
@@ -32,9 +34,14 @@ export default new Router({
           component : PersonalInfo
         },
         {
-          path:'node_info',
-          name:'node_info',
-          component:NodeInfo
+          path:'my_node_info',
+          name:'my_node_info',
+          component:MyNodeInfo
+        },
+        {
+          path:'update_password',
+          name:'update_password',
+          component:UpdatePassword
         },
       ]
 

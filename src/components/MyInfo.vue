@@ -18,26 +18,28 @@
 <script>
 import VerticalTitleBar from "./my_info/VerticalTitleBar";
 import PersonalInfo from "./my_info/PersonalInfo";
-import NodeInfo from "./index/NodeInfo";
 export default {
   name: 'MyInfo',
-  components: {NodeInfo, PersonalInfo, VerticalTitleBar},
+  components: {PersonalInfo, VerticalTitleBar},
   data(){
     return{
       title:'我发布的笔记'
     }
   },
   created: function(){
-    this.$router.push({name: 'node_info'})
+    this.$router.push({name: 'my_node_info'})
   },
   methods:{
     handleClick(item,index){
       this.title = item
       if (index < 3) {
-        this.$router.push({name: 'node_info'})
+        this.$router.push({name:'my_node_info'})
       }
       else if(index == 4){
         this.$router.push({name:'personal_info'})
+      }
+      else if(index == 5){
+        this.$router.push({name:'update_password'})
       }
     }
   }

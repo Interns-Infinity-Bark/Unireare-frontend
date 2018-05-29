@@ -2,7 +2,7 @@
 <template>
   <div class="form-horizontal">
     <div class="form-group">
-      <img @click = "imgClick" class="col-md-offset-4 img-circle"
+      <img @click = "imgClick" class="col-sm-offset-4 avatar avatar-lg"
            :class = "{pointer:flag == true}"
            alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"
       />
@@ -10,25 +10,38 @@
       <input id="upload_avatar" class="d-none" type="file" accept="image/*"/>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Username">昵称：</label>
+      <label class="col-md-4 control-label" for="nickname">昵称：</label>
       <div class="col-md-4">
-        <label v-if="!flag" class="control-label" for="Username">123</label>
-        <input v-if="flag" type="text" class="form-control" name="username" id="Username" value="" placeholder="请输入昵称"/>
+        <label v-if="!flag" class="control-label" for="nickname">123</label>
+        <input v-if="flag" type="text" class="form-control" name="nickname" id="nickname" value="" placeholder="请输入昵称"/>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Password">密码：</label>
+      <label class="col-md-4 control-label" for="school">学校：</label>
       <div class="col-md-4">
-        <label v-if="!flag" class="control-label" for="Username">123</label>
-        <input v-if="flag" type="password" class="form-control " name="password" id="Password" value="" placeholder="请输入密码"/>
+        <label v-if="!flag" class="control-label" for="school">123</label>
+        <input v-if="flag" type="text" class="form-control" name="school" id="school" value="" placeholder="请输入学校"/>
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="ConfirmPassword">确认密码：</label>
+      <label class="col-md-4 control-label" for="major">专业：</label>
       <div class="col-md-4">
-        <label v-if="!flag" class="control-label" for="Username">123</label>
-        <input v-if="flag" type="password" class="form-control " name="confirmPassword" id="ConfirmPassword" value=""
-               placeholder="请确认密码"/>
+        <label v-if="!flag" class="control-label" for="major">123</label>
+        <input v-if="flag" type="text" class="form-control" name="major" id="major" value="" placeholder="请输入专业"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="tel">电话：</label>
+      <div class="col-md-4">
+        <label v-if="!flag" class="control-label" for="tel">123</label>
+        <input v-if="flag" type="text" class="form-control" name="tel" id="tel" value="" placeholder="请输入电话"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="col-md-4 control-label" for="motto">个性签名：</label>
+      <div class="col-md-4">
+        <label v-if="!flag" class="control-label" for="motto">123</label>
+        <input v-if="flag" type="text" class="form-control" name="motto" id="motto" value="" placeholder="请输入个性签名"/>
       </div>
     </div>
     <div class="form-group">
@@ -63,9 +76,26 @@
 </script>
 
 <style scoped>
-  img {
-    display: block;
+  @media (min-width: 768px){
+    .avatar-lg {
+      width: 70px;
+      height: 70px;
+    }
   }
+    .avatar-lg {
+      width: 100px;
+      height: 100px;
+    }
+    .avatar {
+      border-radius: 50%;
+      -webkit-box-shadow: 0 0 0.5em rgba(0,0,0,.25);
+      box-shadow: 0 0 0.5em rgba(0,0,0,.25);
+    }
+    img {
+      vertical-align: middle;
+      border-style: none;
+      display: block;
+    }
   .pointer{
     cursor: pointer;
   }

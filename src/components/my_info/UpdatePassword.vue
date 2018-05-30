@@ -2,9 +2,9 @@
   <div class="form-horizontal">
     <br>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="Password">原密码：</label>
+      <label class="col-md-4 control-label" for="OldPassword">原密码：</label>
       <div class="col-md-4">
-        <input type="password" class="form-control " name="password" id="Password" value="" placeholder="请输入密码"/>
+        <input type="password" class="form-control " name="oldpassword" id="OldPassword" value="" placeholder="请输入密码"/>
       </div>
     </div>
     <div class="form-group">

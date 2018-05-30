@@ -6,7 +6,7 @@
         <div class="row clearfix node hovereffect">
           <div class="overlay">
             <h4>笔记标题</h4>
-            <a class="info" href="#">查看详细信息</a>
+            <a class="info" href="#" @click="nodeClick">查看详细信息</a>
           </div>
           <div class="col-md-3">
             <img class="avatar avatar-lg" alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"/>
@@ -15,9 +15,9 @@
             <h3>笔记标题</h3>
             <h5>
               <span class="label label-default label-info">用户名</span>
-              <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
-              <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
-              <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
+              <img src="../../../static/img/交流.svg" />23
+              <img src="../../../static/img/收藏.svg"/>23
+              <img src="../../../static/img/购物车下单.svg" />23
             </h5>
           </div>
         </div>
@@ -35,9 +35,9 @@
             <h3>笔记标题</h3>
             <h5>
               <span class="label label-default label-info">用户名</span>
-              <object data="../../../static/img/交流.svg" type="image/svg+xml"></object>23
-              <object data="../../../static/img/收藏.svg" type="image/svg+xml"></object>23
-              <object data="../../../static/img/购物车下单.svg" type="image/svg+xml"></object>23
+              <img src="../../../static/img/交流.svg" />23
+              <img src="../../../static/img/收藏.svg"/>23
+              <img src="../../../static/img/购物车下单.svg" />23
             </h5>
           </div>
         </div>
@@ -49,7 +49,12 @@
 
 <script>
   export default {
-    name: "MyNodeInfo"
+    name: "MyNodeInfo",
+    methods:{
+      nodeClick(){
+        this.$router.push({path: '/detail'})
+      }
+    }
   }
 </script>
 
@@ -128,11 +133,6 @@
   .hovereffect:hover a.info {
     -webkit-transition-delay:.2s;
     transition-delay:.2s;
-  }
-  span.label{
-    position: relative;
-    right: 5px;
-    bottom: 10px;
   }
   @media (min-width: 768px){
     .avatar-lg {

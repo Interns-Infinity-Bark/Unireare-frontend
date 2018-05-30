@@ -11,8 +11,12 @@
       </div>
       <div class="col-md-4">
         <br><br>
-        <input v-if="flag" type="text" class="form-control" name="motto" id="motto" value="" placeholder="请输入个性签名"/>
-        <label v-if="!flag" class="control-label" for="motto">这是我的个性签名</label>
+        <input v-show="motto_flag" type="text" class="form-control"
+               name="motto" id="motto" value="1111111"
+               placeholder="请输入个性签名"
+               @blur="wowowo"
+        />
+        <label v-show="!motto_flag" class="control-label" for="motto" @click="ninini">这是我的个性签名</label>
       </div>
     </div>
     <div class="form-group">
@@ -59,7 +63,8 @@
     name: "PersonalInfo",
     data() {
       return {
-        flag: false
+        flag: false,
+        motto_flag: false
       }
     },
     methods:{
@@ -69,6 +74,12 @@
       },
       saveClick(){
         this.flag = !this.flag
+      },
+      ninini(){
+        this.motto_flag = true
+      },
+      wowowo(){
+        this.motto_flag = false
       }
     }
   }

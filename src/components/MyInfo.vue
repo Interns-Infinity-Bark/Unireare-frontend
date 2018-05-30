@@ -32,13 +32,13 @@ export default {
   methods:{
     handleClick(item,index){
       this.title = item
-      if (index < 3) {
+      if (index <= 2) {
         this.$router.push({name:'my_node_info'})
       }
-      else if(index == 4){
+      else if(index === 4){
         this.$router.push({name:'personal_info'})
       }
-      else if(index == 5){
+      else if(index === 5){
         this.$router.push({name:'update_password'})
       }
     }

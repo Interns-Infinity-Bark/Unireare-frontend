@@ -49,7 +49,7 @@
     </div>
     <div class="form-group">
       <br>
-      <div>
+      <div class="col-md-offset-1">
         <button v-if="!flag" @click="flag = !flag" type="submit" class="btn btn-primary btn-lg"> 编辑 </button>
         <button v-if="flag" @click="saveClick" type="submit" class="btn btn-primary btn-lg"> 保存 </button>
       </div>

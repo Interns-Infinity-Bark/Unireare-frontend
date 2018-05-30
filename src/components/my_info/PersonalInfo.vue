@@ -2,12 +2,18 @@
 <template>
   <div class="form-horizontal">
     <div class="form-group">
-      <img @click = "imgClick" class="col-sm-offset-4 avatar avatar-lg"
-           :class = "{pointer:flag == true}"
-           alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"
-      />
-      <br>
-      <input id="upload_avatar" class="d-none" type="file" accept="image/*"/>
+      <div class="col-md-offset-3 col-md-2">
+        <img @click = "imgClick" class="avatar avatar-lg"
+             :class = "{pointer:flag == true}"
+             alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"
+        />
+        <input id="upload_avatar" class="d-none" type="file" accept="image/*"/>
+      </div>
+      <div class="col-md-4">
+        <br><br>
+        <input v-if="flag" type="text" class="form-control" name="motto" id="motto" value="" placeholder="请输入个性签名"/>
+        <label v-if="!flag" class="control-label" for="motto">这是我的个性签名</label>
+      </div>
     </div>
     <div class="form-group">
       <label class="col-md-4 control-label" for="nickname">昵称：</label>
@@ -38,15 +44,8 @@
       </div>
     </div>
     <div class="form-group">
-      <label class="col-md-4 control-label" for="motto">个性签名：</label>
-      <div class="col-md-4">
-        <label v-if="!flag" class="control-label" for="motto">123</label>
-        <input v-if="flag" type="text" class="form-control" name="motto" id="motto" value="" placeholder="请输入个性签名"/>
-      </div>
-    </div>
-    <div class="form-group">
       <br>
-      <div class="col-md-offset-5 col-md-1">
+      <div>
         <button v-if="!flag" @click="flag = !flag" type="submit" class="btn btn-primary btn-lg"> 编辑 </button>
         <button v-if="flag" @click="saveClick" type="submit" class="btn btn-primary btn-lg"> 保存 </button>
       </div>
@@ -94,7 +93,6 @@
     img {
       vertical-align: middle;
       border-style: none;
-      display: block;
     }
   .pointer{
     cursor: pointer;

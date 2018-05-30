@@ -1,14 +1,16 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-sm-2 column">
+      <div class="col-md-2 column">
         <br><br><br>
         <vertical-title-bar
         @titleClick = "handleClick"
         ></vertical-title-bar>
       </div>
-      <div class="col-lg-10 column">
-          <h2>{{title}}</h2>
+      <div class="col-md-10 column">
+        <div class="row">
+          <h2 class="col-md-offset-1">{{title}}</h2>
+        </div>
           <router-view></router-view>
       </div>
     </div>
@@ -16,17 +18,16 @@
 </template>
 
 <script>
-import VerticalTitleBar from "./my_info/VerticalTitleBar";
-import PersonalInfo from "./my_info/PersonalInfo";
+import VerticalTitleBar from "./my_info/VerticalTitleBar"
 export default {
   name: 'MyInfo',
-  components: {PersonalInfo, VerticalTitleBar},
+  components: {VerticalTitleBar},
   data(){
     return{
       title:'我发布的笔记'
     }
   },
-  created: function(){
+  created(){
     this.$router.push({name: 'my_node_info'})
   },
   methods:{

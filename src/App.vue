@@ -6,7 +6,9 @@
           <div class="navbar-brand col-md-2" style="color: white">{{ProjectName}}</div>
           <router-link to="/index" class="navbar-brand col-md-1">{{IndexButton}}</router-link>
           <router-link to="/publish" class="navbar-brand col-md-1">{{PublishButton}}</router-link>
-          <router-link to="/myinfo" class="navbar-brand col-md-1">{{MyInfoButton}}</router-link>
+          <router-link to="/myinfo" class="navbar-brand col-md-1"
+                       @click.native="myInfoClick"
+          >{{MyInfoButton}}</router-link>
           <router-link to="/login" class="navbar-brand col-md-7 text-right">{{LoginButton}}</router-link>
         </div>
       </div>
@@ -24,9 +26,13 @@
 </template>
 
 <script>
+  import MyInfo from './components/MyInfo'
   export default {
     name: 'App',
-    data () {
+    components:{
+      MyInfo
+    },
+    data() {
       return {
         ProjectName: '爱分享',
         IndexButton: '首页',
@@ -34,7 +40,12 @@
         PublishButton: '发布',
         LoginButton: '登入'
       }
-    }
+    },
+    methods:{
+      myInfoClick(){
+        this.$router.go(0);
+      }
+    },
   }
 </script>
 

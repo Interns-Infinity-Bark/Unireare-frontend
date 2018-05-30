@@ -2,6 +2,7 @@
   <div>
     <br>
     <div class="row clearfix">
+      <div class="col-md-1"></div>
       <div class="col-md-5 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
@@ -22,7 +23,8 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-offset-2 col-md-5 column">
+      <div class="col-md-1"></div>
+      <div class="col-md-5 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
             <h4>笔记标题</h4>

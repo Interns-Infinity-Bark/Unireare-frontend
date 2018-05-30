@@ -9,7 +9,7 @@ import NotFound from '@/components/NotFound'
 import PersonalInfo from '@/components/my_info/PersonalInfo'
 import UpdatePassword from '@/components/my_info/UpdatePassword'
 import MyNodeInfo from '@/components/my_info/MyNodeInfo'
-import NodeInfo from '@/components/index/NodeInfo'
+import Detail from '@/components/Detail'
 Vue.use(Router)
 
 
@@ -29,17 +29,17 @@ export default new Router({
       component: MyInfo,
       children:[
         {
-          path:'personal_info',
+          path:'/personal_info',
           name:'personal_info',
           component : PersonalInfo
         },
         {
-          path:'my_node_info',
+          path:'/my_node_info',
           name:'my_node_info',
           component:MyNodeInfo
         },
         {
-          path:'update_password',
+          path:'/update_password',
           name:'update_password',
           component:UpdatePassword
         },
@@ -53,6 +53,10 @@ export default new Router({
     {
       path: '/register',
       component: Register
+    },
+    {
+      path: '/detail',
+      component: Detail
     },
     {
       path: '/',

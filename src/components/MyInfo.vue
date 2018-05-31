@@ -8,9 +8,7 @@
         ></vertical-title-bar>
       </div>
       <div class="col-md-10 column">
-        <div class="row">
-          <h2 class="col-md-offset-1">{{title}}</h2>
-        </div>
+          <h2>{{title}}</h2>
           <router-view></router-view>
       </div>
     </div>

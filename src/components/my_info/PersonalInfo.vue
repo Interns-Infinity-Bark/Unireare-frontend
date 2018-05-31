@@ -2,7 +2,8 @@
 <template>
   <div class="form-horizontal">
     <div class="form-group">
-      <div class="col-md-offset-3 col-md-2">
+      <div class="col-md-3"></div>
+      <div class="col-md-2">
         <img @click = "imgClick" class="avatar avatar-lg"
              :class = "{pointer:flag == true}"
              alt="100x100" src="https://s20.postimg.cc/wpqva9g65/100x100.jpg"
@@ -49,10 +50,8 @@
     </div>
     <div class="form-group">
       <br>
-      <div class="col-md-offset-1">
         <button v-if="!flag" @click="flag = !flag" type="submit" class="btn btn-primary btn-lg"> 编辑 </button>
         <button v-if="flag" @click="saveClick" type="submit" class="btn btn-primary btn-lg"> 保存 </button>
-      </div>
     </div>
 
   </div>

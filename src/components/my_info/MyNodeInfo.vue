@@ -2,7 +2,6 @@
   <div>
     <br>
     <div class="row clearfix">
-      <div class="col-md-1"></div>
       <div class="col-md-5 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
@@ -23,7 +22,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-1"></div>
+      <div class="col-md-2"></div>
       <div class="col-md-5 column">
         <div class="row clearfix node hovereffect">
           <div class="overlay">
